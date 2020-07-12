@@ -30,7 +30,6 @@ class Game {
         player1 = createSprite(10, 200);
         player1.scale = 1;
         player1.setCollider("rectangle", 0, 0)
-        player1.debug = true;
         player1.velocityY = 1;
         player1.addImage("player1", player1_img);
         player2 = createSprite(10, 500);
@@ -38,18 +37,14 @@ class Game {
         player2.velocityY = 1;
 
         player2.setCollider("rectangle", 0, 0);
-        player2.debug = true;
 
         player2.addImage("player2", player2_img);
         players = [player1, player2];
         invisibleGround1 = createSprite(100, 480, displayWidth * 5, 20);
         invisibleGround1.setCollider("rectangle", 0, 0);
-        invisibleGround1.debug = true;
 
         invisibleGround2 = createSprite(100, 750, displayWidth * 5, 20);
         invisibleGround2.setCollider("rectangle", 0, 0);
-        invisibleGround2.debug = true;
-
 
     }
     play() {
@@ -65,7 +60,6 @@ class Game {
             var index = 0;
             var y = 140;
             var x = 50;
-
 
             player1.collide(invisibleGround1);
             player2.collide(invisibleGround2);
@@ -134,7 +128,6 @@ function spawnObstacles() {
         obstacle.scale = 0.80;
         obstacle.lifetime = 800;
         obstacle.setCollider("rectangle", -10, 0, 90, 150);
-        obstacle.debug = true;
     }
 }
 
@@ -148,7 +141,6 @@ function spawnObstacles1() {
         obstacle.scale = 0.80;
         obstacle.lifetime = 800;
         obstacle.setCollider("rectangle", -10, 0, 90, 150);
-        obstacle.debug = true;
 
     }
 }
