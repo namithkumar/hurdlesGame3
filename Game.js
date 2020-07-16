@@ -90,6 +90,7 @@ class Game {
 
                     if (keyDown("space")) {
                         players[index - 1].velocityY = -4;
+                        console.log("hello");
                     }
                 }
 
